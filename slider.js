@@ -19,19 +19,19 @@ function slider(idSlider, sec){
             }, ыус *1000); // устанавливаем интервал перелистывания в милисекундах
                 
             //Отображение слайда только с заданным индексом    
-            function showSlide(slideIndex){
+            function showSlide(index){
 
                 if(slideIndex > imgs.length){
-                    slideIndex = 1;
+                    index = slideIndex = 1;    
                 }
                 if(slideIndex < 1){
-                    slideIndex = imgs.length;
+                    index = slideIndex = imgs.length;
                 }
 
                 imgs.forEach((img)=>img.style.display = "none");
                 dots.forEach((dot)=>dot.classList.remove("dot-active"));
-                imgs[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].classList.add("dot-active");
+                imgs[index-1].style.display = "block";
+                dots[index-1].classList.add("dot-active");
             }
             
             //перелистывание , увеличиваем индекс на единицу
